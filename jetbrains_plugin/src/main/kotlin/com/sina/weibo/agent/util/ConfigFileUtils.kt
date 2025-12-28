@@ -54,7 +54,7 @@ object ConfigFileUtils {
     /**
      * Save properties to main configuration file
      */
-    fun saveMainConfig(properties: Properties, comment: String = "RunVSAgent Configuration") {
+    fun saveMainConfig(properties: Properties, comment: String = "pabCoder Configuration") {
         try {
             // Ensure configuration directory exists
             ensureConfigDirExists()
@@ -163,7 +163,7 @@ object ConfigFileUtils {
         properties.setProperty("# - cline: Cline AI extension", "")
         properties.setProperty("# - custom: Custom extension", "")
         
-        saveMainConfig(properties, "RunVSAgent Extension Configuration - Default Template")
+        saveMainConfig(properties, "pabCoder Extension Configuration - Default Template")
     }
     
     /**

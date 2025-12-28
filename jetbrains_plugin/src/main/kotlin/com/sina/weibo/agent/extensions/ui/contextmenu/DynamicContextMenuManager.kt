@@ -131,7 +131,7 @@ class DynamicContextMenuManager(private val project: Project) {
                     val actionManager = com.intellij.openapi.actionSystem.ActionManager.getInstance()
                     
                     // Get the dynamic context menu actions group
-                    val dynamicGroup = actionManager.getAction("RunVSAgent.DynamicExtensionContextMenu")
+                    val dynamicGroup = actionManager.getAction("pabCoder.DynamicExtensionContextMenu")
                     dynamicGroup?.let { group ->
                         // Trigger UI refresh by notifying the platform
                         // The platform will automatically call the appropriate update methods

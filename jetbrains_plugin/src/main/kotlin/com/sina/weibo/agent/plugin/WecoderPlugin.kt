@@ -69,7 +69,7 @@ class WecoderPlugin : StartupActivity.DumbAware {
         val osArch = System.getProperty("os.arch")
         
         LOG.info(
-            "Initializing RunVSAgent plugin for project: ${project.name}, " +
+            "Initializing pabCoder plugin for project: ${project.name}, " +
             "OS: $osName $osVersion ($osArch), " +
             "IDE: ${appInfo.fullApplicationName} (build ${appInfo.build}), " +
             "Plugin version: $pluginVersion, " +
@@ -92,7 +92,7 @@ class WecoderPlugin : StartupActivity.DumbAware {
             // 3. Validate configuration validity
             if (!canProceedWithInitialization(configManager)) {
                 // Check if auto-creation of default configuration is allowed (controlled by system property)
-                val allowAutoCreate = System.getProperty("runvsagent.auto.create.config", "false").toBoolean()
+                val allowAutoCreate = System.getProperty("pabcoder.auto.create.config", "false").toBoolean()
                 if (allowAutoCreate) {
                     LOG.info("Auto-creation of default configuration is enabled, attempting to create...")
                     configManager.createDefaultConfiguration()
@@ -109,7 +109,7 @@ class WecoderPlugin : StartupActivity.DumbAware {
                 } else {
                     // Don't auto-create default configuration, truly pause initialization
                     LOG.warn("Plugin initialization paused due to invalid configuration")
-                    LOG.warn("To enable auto-creation of default configuration, set system property: -Drunvsagent.auto.create.config=true")
+                    LOG.warn("To enable auto-creation of default configuration, set system property: -Dpabcoder.auto.create.config=true")
                     LOG.warn("Or manually create/fix ${PluginConstants.ConfigFiles.MAIN_CONFIG_FILE} file")
                     LOG.warn("Then restart the IDE or reload the project to continue")
                     return // Truly pause initialization
@@ -138,19 +138,19 @@ class WecoderPlugin : StartupActivity.DumbAware {
                 
                 // Register project-level resource cleanup
                 Disposer.register(project, Disposable {
-                    LOG.info("Disposing RunVSAgent plugin for project: ${project.name}")
+                    LOG.info("Disposing pabCoder plugin for project: ${project.name}")
                     pluginService.dispose()
                     extensionManager.dispose()
                     SystemObjectProvider.dispose()
                 })
                 
-                LOG.info("RunVSAgent plugin initialized successfully for project: ${project.name}")
+                LOG.info("pabCoder plugin initialized successfully for project: ${project.name}")
             } else {
                 LOG.error("Configuration is valid but no extension ID found, plugin initialization paused")
                 return
             }
         } catch (e: Exception) {
-            LOG.error("Failed to initialize RunVSAgent plugin", e)
+            LOG.error("Failed to initialize pabCoder plugin", e)
         }
     }
     
@@ -213,7 +213,7 @@ class WecoderPlugin : StartupActivity.DumbAware {
             }
         }.apply {
             isDaemon = true
-            name = "RunVSAgent-ConfigMonitor"
+            name = "pabCoder-ConfigMonitor"
             start()
         }
     }

@@ -153,7 +153,7 @@ class RunVSAgentToolWindowFactory : ToolWindowFactory {
 
                 // Header section
                 append("<div class='header'>")
-                append("<div class='title'>🚀 RunVSAgent</div>")
+                append("<div class='title'>🚀 pabCoder</div>")
                 append("<div class='subtitle'>Initializing...</div>")
                 append("</div>")
 
@@ -564,7 +564,7 @@ class RunVSAgentToolWindowFactory : ToolWindowFactory {
             val isLinuxArm = osName.lowercase().contains("linux") && (osArch.lowercase().contains("aarch64") || osArch.lowercase().contains("arm"))
 
             return buildString {
-                append("RunVSAgent System Information\n")
+                append("pabCoder System Information\n")
                 append("=============================\n\n")
                 append("🚀 Plugin Status: Initializing...\n\n")
                 append("📊 System Information:\n")
@@ -607,7 +607,7 @@ class RunVSAgentToolWindowFactory : ToolWindowFactory {
             isFocusPainted = false
             border = javax.swing.BorderFactory.createEmptyBorder(8, 16, 8, 16)
             addActionListener {
-                BrowserUtil.browse("https://github.com/wecode-ai/RunVSAgent/blob/main/docs/KNOWN_ISSUES.md")
+                BrowserUtil.browse("")
             }
         }
 
@@ -746,7 +746,7 @@ class RunVSAgentToolWindowFactory : ToolWindowFactory {
                 }
             }.apply {
                 isDaemon = true
-                name = "RunVSAgent-ConfigMonitor-UI"
+                name = "pabCoder-ConfigMonitor-UI"
                 start()
             }
         }
@@ -1268,7 +1268,7 @@ class RunVSAgentToolWindowFactory : ToolWindowFactory {
                     
                     // Register project-level resource disposal
                     com.intellij.openapi.util.Disposer.register(project, com.intellij.openapi.Disposable {
-                        logger.info("Disposing RunVSAgent plugin for project: ${project.name}")
+                        logger.info("Disposing pabCoder plugin for project: ${project.name}")
                         pluginService.dispose()
                         extensionManager.dispose()
                         SystemObjectProvider.dispose()
@@ -1377,7 +1377,7 @@ class RunVSAgentToolWindowFactory : ToolWindowFactory {
          */
         private fun showDebugInfo() {
             val debugText = """
-                RunVSAgent Debug Information
+                pabCoder Debug Information
                 ============================
                 
                 🚀 Plugin Status: ${if (configManager.isConfigurationLoaded() && configManager.isConfigurationValid()) "Loaded and Valid" else "Not Loaded or Invalid"}

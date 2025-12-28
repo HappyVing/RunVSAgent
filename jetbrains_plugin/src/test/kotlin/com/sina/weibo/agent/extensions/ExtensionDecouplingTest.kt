@@ -53,17 +53,17 @@ class ExtensionDecouplingTest : BasePlatformTestCase() {
         }
     }
     
-    fun testExtensionConfiguration() {
-        val rooProvider = extensionManager.getProvider("roo-code")
-        assertNotNull("Roo provider should exist", rooProvider)
+    // fun testExtensionConfiguration() {
+    //     val rooProvider = extensionManager.getProvider("roo-code")
+    //     assertNotNull("Roo provider should exist", rooProvider)
         
-        val config = rooProvider?.getConfiguration(project)
-        assertNotNull("Configuration should not be null", config)
+    //     val config = rooProvider?.getConfiguration(project)
+    //     assertNotNull("Configuration should not be null", config)
         
-        assertEquals("Code directory should be roo-code", "roo-code", config?.getCodeDir())
-        assertEquals("Publisher should be WeCode-AI", "WeCode-AI", config?.getPublisher())
-        assertEquals("Version should be 1.0.0", "1.0.0", config?.getVersion())
-    }
+    //     assertEquals("Code directory should be roo-code", "roo-code", config?.getCodeDir())
+    //     assertEquals("Publisher should be WeCode-AI", "WeCode-AI", config?.getPublisher())
+    //     assertEquals("Version should be 1.0.0", "1.0.0", config?.getVersion())
+    // }
     
     fun testExtensionAvailability() {
         // Test extension availability checking

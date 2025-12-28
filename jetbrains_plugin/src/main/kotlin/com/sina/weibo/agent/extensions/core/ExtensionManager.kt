@@ -108,9 +108,9 @@ class ExtensionManager(private val project: Project) {
     fun getAllExtensions(): List<ExtensionProvider> {
         return ArrayList<ExtensionProvider>().apply {
             add(RooExtensionProvider())
-            add(ClineExtensionProvider())
-            add(KiloCodeExtensionProvider())
-            add(CostrictExtensionProvider())
+            // add(ClineExtensionProvider())
+            // add(KiloCodeExtensionProvider())
+            // add(CostrictExtensionProvider())
         }
     }
     

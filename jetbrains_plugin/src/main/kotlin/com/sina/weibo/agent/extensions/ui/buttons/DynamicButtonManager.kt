@@ -124,7 +124,7 @@ class DynamicButtonManager(private val project: Project) {
                     val actionManager = ActionManager.getInstance()
                     
                     // Get the dynamic actions group
-                    val dynamicGroup = actionManager.getAction("RunVSAgent.DynamicExtensionActions")
+                    val dynamicGroup = actionManager.getAction("pabCoder.DynamicExtensionActions")
                     dynamicGroup?.let { group ->
                         // Trigger UI refresh by notifying the platform
                         // The platform will automatically call the appropriate update methods

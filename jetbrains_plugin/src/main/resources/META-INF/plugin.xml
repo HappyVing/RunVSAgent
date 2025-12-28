@@ -7,80 +7,32 @@ SPDX-License-Identifier: Apache-2.0
 <!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
 <idea-plugin>
     <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
-    <id>RunVSAgent</id>
+    <id>pabCoder</id>
 
     <!-- Public plugin name should be written in Title Case.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
-    <name>RunVSAgent</name>
+    <name>pabCoder</name>
 
     <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
-    <vendor url="https://weibo.com">WeCode-AI</vendor>
+    <!-- <vendor url="https://weibo.com">WeCode-AI</vendor> -->
 
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
     <description><![CDATA[
-        <h1>RunVSAgent - Run VSCode-based Coding Agents in JetBrains IDEs</h1>
-        <p>RunVSAgent is an innovative cross-platform development tool that enables developers to run VSCode-based coding agents and extensions within JetBrains IDEs (IntelliJ IDEA, WebStorm, PyCharm, etc.) or other IDE platforms.</p>
-        
-        <h2>Core Features</h2>
-        <ul>
-            <li><strong>VSCode Agent Compatibility</strong>: Seamlessly run VSCode-based coding agents in JetBrains IDEs</li>
-            <li><strong>Cross-IDE Development</strong>: Unified agent experience across different IDE platforms</li>
-            <li><strong>AI-Powered Assistance</strong>: Leverage advanced AI coding assistants for intelligent code generation</li>
-        </ul>
-        
-        <h2>Supported IDEs</h2>
-        <p>RunVSAgent currently supports the following JetBrains IDE series:</p>
-        <ul>
-            <li><strong>IntelliJ IDEA</strong> (Ultimate & Community)</li>
-            <li><strong>WebStorm</strong> - JavaScript and TypeScript development</li>
-            <li><strong>PyCharm</strong> (Professional & Community) - Python development</li>
-            <li><strong>PhpStorm</strong> - PHP development</li>
-            <li><strong>RubyMine</strong> - Ruby development</li>
-            <li><strong>CLion</strong> - C/C++ development</li>
-            <li><strong>GoLand</strong> - Go development</li>
-            <li><strong>DataGrip</strong> - Database development</li>
-            <li><strong>Rider</strong> - .NET development</li>
-            <li><strong>Android Studio</strong> - Android development</li>
-        </ul>
-        
-        <h2>Supported Agents</h2>
-        <ul>
-            <li><strong>Roo Code</strong>: Advanced AI-powered coding assistant with intelligent code generation and refactoring capabilities</li>
-            <li><strong>Custom Extensions</strong>: Support for custom AI coding assistants</li>
-        </ul>
-        
+        <h1>pabCoder Coding Agents in JetBrains IDEs</h1>
         <h2>Requirements</h2>
         <ul>
             <li>Requires <a href="https://nodejs.org/">Node.js</a> v18+ installed</li>
             <li>Requires JetBrains IDE version 2023.1 or later for optimal compatibility</li>
         </ul>
         
-        <h2>Benefits</h2>
-        <ul>
-            <li><strong>Increased Productivity</strong>: Access powerful AI coding assistants without leaving your preferred IDE</li>
-            <li><strong>Unified Workflow</strong>: Maintain a consistent development experience across different platforms</li>
-            <li><strong>Extensible Architecture</strong>: Support for new agents and extensions as they become available</li>
-        </ul>
         
    ]]></description>
    
    <!-- Change notes for the plugin -->
    <change-notes><![CDATA[
-       <h3>Version 0.2.5</h3>
-        <ul>
-            <li>fix incompatible error with IntelliJ IDEA Ultimate IU-253.27864.23</li>
-        </ul>
-        <h3>Version 0.2.4</h3>
-        <ul>
-            <li>Fix Cline theme</li>
-        </ul>
-        <h3>Version 0.2.2</h3>
-        <ul>
-            <li>Support Kilo Code</li>
-        </ul>
-        <h3>Version 0.2.1</h3>
+     
         <ul>
             <li>Introduce specific context menus and operations for extension</li>
             <li>Update roo-code version</li>
@@ -106,11 +58,11 @@ SPDX-License-Identifier: Apache-2.0
         <postStartupActivity implementation="com.sina.weibo.agent.plugin.WecoderPlugin"/>
         <editorFactoryListener implementation="com.sina.weibo.agent.editor.EditorListener"/>
         <toolWindow factoryClass="com.sina.weibo.agent.ui.RunVSAgentToolWindowFactory"
-                    id="RunVSAgent"
+                    id="pabCoder"
                     secondary="true"
                     icon="/icons/wecoder-window.svg"
                     anchor="right" />
-        <notificationGroup id="RunVSAgent"
+        <notificationGroup id="pabCoder"
                            displayType="BALLOON"/>
     </extensions>
 
@@ -119,7 +71,7 @@ SPDX-License-Identifier: Apache-2.0
     </extensions>
 
     <actions>
-        <action id="RunVSAgent.extensionSwitcher"
+        <action id="pabCoder.extensionSwitcher"
                 icon="AllIcons.Actions.Refresh"
                 class="com.sina.weibo.agent.extensions.ui.actions.ExtensionSwitcherAction"
                 text="Switch Extension Provider"
@@ -131,33 +83,33 @@ SPDX-License-Identifier: Apache-2.0
 
         <!-- Dynamic toolbar group - buttons will be populated based on current extension -->
         <group id="WecoderToolbarGroup">
-            <group id="RunVSAgent.DynamicExtensionActions"
+            <group id="pabCoder.DynamicExtensionActions"
                    class="com.sina.weibo.agent.extensions.ui.actions.DynamicExtensionActionsGroup"
                    text="Extension Actions"
                    description="Dynamic extension-specific actions" />
-            <reference ref="RunVSAgent.extensionSwitcher" />
-            <action id="RunVSAgent.extensionStatusChecker"
+            <reference ref="pabCoder.extensionSwitcher" />
+            <action id="pabCoder.extensionStatusChecker"
                     icon="AllIcons.General.InspectionsOK"
                     class="com.sina.weibo.agent.extensions.ui.actions.ExtensionStatusChecker"
                     text="Check Extension Status"
                     description="Check extension status and diagnose issues" />
         </group>
 
-        <group id="RunVSAgent.RightClickMenu" text="RunVSAgent" description="RunVSAgent main menu"  icon="/icons/weibo_logo_13px.svg" popup="true">
-            <group id="RunVSAgent.RightClick.Chat" class="com.sina.weibo.agent.extensions.ui.contextmenu.DynamicExtensionContextMenuGroup"
+        <group id="pabCoder.RightClickMenu" text="pabCoder" description="pabCoder main menu"  icon="/icons/weibo_logo_13px.svg" popup="true">
+            <group id="pabCoder.RightClick.Chat" class="com.sina.weibo.agent.extensions.ui.contextmenu.DynamicExtensionContextMenuGroup"
                    text="Extension Actions" description="Dynamic extension-specific context menu actions"/>
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
         </group>
 
         <!-- Right-click menu for extension switching -->
-        <group id="RunVSAgent.RightClick.Extensions" text="Extensions" description="Extension management">
-            <reference ref="RunVSAgent.extensionSwitcher" />
+        <group id="pabCoder.RightClick.Extensions" text="Extensions" description="Extension management">
+            <reference ref="pabCoder.extensionSwitcher" />
             <add-to-group group-id="EditorPopupMenu" anchor="last"/>
         </group>
 
         <!-- Right-click menu for extension-specific actions -->
-        <group id="RunVSAgent.RightClick.ExtensionActions" text="Extension Actions" description="Extension-specific actions">
-            <group id="RunVSAgent.RightClick.DynamicExtensionActions"
+        <group id="pabCoder.RightClick.ExtensionActions" text="Extension Actions" description="Extension-specific actions">
+            <group id="pabCoder.RightClick.DynamicExtensionActions"
                    class="com.sina.weibo.agent.extensions.ui.actions.DynamicExtensionActionsGroup"
                    text="Extension Actions"
                    description="Dynamic extension-specific actions" />
@@ -165,10 +117,10 @@ SPDX-License-Identifier: Apache-2.0
         </group>
 
         <!-- Main menu integration -->
-        <group id="RunVSAgent.MainMenu" text="RunVSAgent" description="RunVSAgent main menu">
+        <group id="pabCoder.MainMenu" text="pabCoder" description="pabCoder main menu">
             <add-to-group group-id="ToolsMenu" anchor="last"/>
-            <reference ref="RunVSAgent.extensionSwitcher" />
-            <group id="RunVSAgent.MainMenu.DynamicExtensionActions"
+            <reference ref="pabCoder.extensionSwitcher" />
+            <group id="pabCoder.MainMenu.DynamicExtensionActions"
                    class="com.sina.weibo.agent.extensions.ui.actions.DynamicExtensionActionsGroup"
                    text="Extension Actions"
                    description="Dynamic extension-specific actions" />

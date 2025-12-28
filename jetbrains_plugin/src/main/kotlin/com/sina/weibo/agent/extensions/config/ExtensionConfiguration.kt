@@ -160,7 +160,7 @@ data class ExtensionConfig(
                     codeDir = "roo-code",
                     displayName = "Roo Code",
                     description = "AI-powered code assistant",
-                    publisher = "WeCode-AI",
+                    publisher = "pabCoder",
                     version = "1.0.0",
                     mainFile = "./dist/extension.js",
                     activationEvents = listOf("onStartupFinished"),
