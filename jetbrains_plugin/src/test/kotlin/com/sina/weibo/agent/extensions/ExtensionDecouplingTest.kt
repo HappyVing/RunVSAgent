@@ -35,8 +35,8 @@ class ExtensionDecouplingTest : BasePlatformTestCase() {
         
         // Check specific providers
         val rooProvider = extensionManager.getProvider("roo-code")
-        assertNotNull("Roo Code provider should be registered", rooProvider)
-        assertEquals("Roo Code", rooProvider?.getDisplayName())
+        assertNotNull("pabCoder provider should be registered", rooProvider)
+        assertEquals("pabCoder", rooProvider?.getDisplayName())
     }
     
     fun testExtensionProviderSwitching() {

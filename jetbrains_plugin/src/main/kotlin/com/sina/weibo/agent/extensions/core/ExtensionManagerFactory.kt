@@ -12,7 +12,7 @@ import com.sina.weibo.agent.util.PluginResourceUtil
 import java.io.File
 
 /**
- * Extension manager factory for Roo Code
+ * Extension manager factory for pabCoder
  * Creates and manages extension managers for different extension types
  */
 @Service(Service.Level.PROJECT)

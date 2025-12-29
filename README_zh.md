@@ -21,7 +21,7 @@ RunVSAgent 是一个创新的跨平台开发工具，使开发者能够在 JetBr
 
 ## 🤖 支持的代理
 
-- **[Roo Code](https://roocode.com)**：具有智能代码生成和重构功能的高级 AI 驱动编码助手
+- **[pabCoder](https://roocode.com)**：具有智能代码生成和重构功能的高级 AI 驱动编码助手
 - **[Cline](https://cline.bot)**: 一个就在你 IDE 里的自主编码代理，在你的许可下，能够创建/编辑文件、执行命令、使用浏览器等更多功能，并在每一步都征求你的确认。
 - **[Kilo Code](https://kilocode.ai)**: 开源的VSCode AI Agent
 

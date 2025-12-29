@@ -19,7 +19,7 @@ data class RooCodeSupportPromptConfig(val template: String)
  * Collection of predefined prompt configurations for different use cases.
  * Each configuration contains a template with placeholders for dynamic content.
  * 
- * now organized under the Roo Code extension.
+ * now organized under the pabCoder extension.
  */
 object RooCodeSupportPromptConfigs {
     /**
@@ -174,10 +174,10 @@ Please provide:
 }
 
 /**
- * Utility object for working with Roo Code support prompts.
+ * Utility object for working with pabCoder support prompts.
  * Provides methods for creating and customizing prompts based on templates.
  * 
- * now organized under the Roo Code extension.
+ * now organized under the pabCoder extension.
  */
 object RooCodeSupportPrompt {
     /**

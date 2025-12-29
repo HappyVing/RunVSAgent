@@ -1,11 +1,11 @@
 package com.sina.weibo.agent.extensions.common
 
 /**
- * Extension type enum for Roo Code
+ * Extension type enum for pabCoder
  * Defines different types of extensions that can be supported
  */
 enum class ExtensionType(val code: String, val displayName: String, val description: String) {
-    ROO_CODE("roo-code", "Roo Code", "AI-powered code assistant"),
+    ROO_CODE("roo-code", "pabCoder", "AI-powered code assistant"),
     CLINE("cline", "Cline AI", "AI-powered coding assistant with advanced features"),
     KILO_CODE("kilo-code", "Kilo Code", "AI-powered code assistant with advanced capabilities"),
     COSTRICT("costrict", "Costrict", "AI-powered code assistant with advanced capabilities"),

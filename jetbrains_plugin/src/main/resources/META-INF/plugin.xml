@@ -40,7 +40,7 @@ SPDX-License-Identifier: Apache-2.0
         <h3>Version 0.2.0</h3>
         <ul>
             <li>Support the Cline plugin and allow switching between multiple plugins.</li>
-            <li>Important: The storage path has changed in the new version. Therefore, before upgrading, please use Roo Code’s Export Settings feature to back up your settings.</li>
+            <li>Important: The storage path has changed in the new version. Therefore, before upgrading, please use pabCoder's Export Settings feature to back up your settings.</li>
         </ul>
 
 

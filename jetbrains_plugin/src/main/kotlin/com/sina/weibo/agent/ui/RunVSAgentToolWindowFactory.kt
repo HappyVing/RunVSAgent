@@ -1355,7 +1355,7 @@ class RunVSAgentToolWindowFactory : ToolWindowFactory {
                    ${PluginConstants.ConfigFiles.EXTENSION_TYPE_KEY}=roo-code
                    
                 3. Supported plugin types:
-                   - roo-code: Roo Code AI Assistant
+                   - roo-code: pabCoder AI Assistant
                    - cline: Cline AI Assistant
                    - custom: Custom Plugin
                    

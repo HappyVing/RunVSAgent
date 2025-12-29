@@ -6,7 +6,7 @@ RunVSAgent now supports a modular extension system that allows you to use differ
 
 ## Supported Extensions
 
-### 1. Roo Code (Default)
+### 1. pabCoder (Default)
 - **ID**: `roo-code`
 - **Description**: AI-powered code assistant with intelligent code generation
 - **Publisher**: WeCode-AI
@@ -52,7 +52,7 @@ RunVSAgent now supports a modular extension system that allows you to use differ
    ```
    your-project/
    ├── .vscode-agent          # Configuration file
-   ├── roo-code/              # Roo Code extension files
+   ├── roo-code/              # pabCoder extension files
    │   ├── package.json
    │   ├── dist/
    │   └── src/

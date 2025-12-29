@@ -16,13 +16,13 @@ import com.sina.weibo.agent.util.PluginResourceUtil
 import java.io.File
 
 /**
- * Roo Code extension provider implementation
+ * pabCoder extension provider implementation
  */
 class RooExtensionProvider : ExtensionProvider {
     
     override fun getExtensionId(): String = "roo-code"
     
-    override fun getDisplayName(): String = "Roo Code"
+    override fun getDisplayName(): String = "pabCoder"
     
     override fun getDescription(): String = "AI-powered code assistant"
     

@@ -14,7 +14,7 @@ import com.sina.weibo.agent.util.PluginConstants
 import com.sina.weibo.agent.util.ConfigFileUtils
 
 /**
- * Extension configuration manager for Roo Code
+ * Extension configuration manager for pabCoder
  * Manages configuration for different extension types
  */
 @Service(Service.Level.PROJECT)
@@ -134,7 +134,7 @@ class ExtensionConfiguration(private val project: Project) {
 }
 
 /**
- * Extension configuration data class for Roo Code
+ * Extension configuration data class for pabCoder
  */
 data class ExtensionConfig(
     val extensionType: ExtensionType,
@@ -158,7 +158,7 @@ data class ExtensionConfig(
                 ExtensionType.ROO_CODE -> ExtensionConfig(
                     extensionType = extensionType,
                     codeDir = "roo-code",
-                    displayName = "Roo Code",
+                    displayName = "pabCoder",
                     description = "AI-powered code assistant",
                     publisher = "pabCoder",
                     version = "1.0.0",

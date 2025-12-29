@@ -15,15 +15,15 @@ import com.sina.weibo.agent.extensions.ui.contextmenu.ContextMenuActionType
 import com.sina.weibo.agent.webview.WebViewManager
 
 /**
- * Roo Code extension context menu provider.
- * Provides context menu actions specific to Roo Code extension.
+ * pabCoder extension context menu provider.
+ * Provides context menu actions specific to pabCoder extension.
  * This includes all the original roo-cline functionality.
  */
 class RooCodeContextMenuProvider : ExtensionContextMenuProvider {
     
     override fun getExtensionId(): String = "roo-code"
     
-    override fun getDisplayName(): String = "Roo Code"
+    override fun getDisplayName(): String = "pabCoder"
     
     override fun getDescription(): String = "AI-powered code assistant with full context menu capabilities"
     
@@ -47,11 +47,11 @@ class RooCodeContextMenuProvider : ExtensionContextMenuProvider {
     }
     
     /**
-     * Roo Code context menu configuration - shows all actions (full-featured).
+     * pabCoder context menu configuration - shows all actions (full-featured).
      */
     private class RooCodeContextMenuConfiguration : ContextMenuConfiguration {
         override fun isActionVisible(actionType: ContextMenuActionType): Boolean {
-            return true // All actions are visible for Roo Code
+            return true // All actions are visible for pabCoder
         }
         
         override fun getVisibleActions(): List<ContextMenuActionType> {

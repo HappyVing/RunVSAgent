@@ -15,14 +15,14 @@ import com.sina.weibo.agent.extensions.ui.buttons.ButtonType
 import com.sina.weibo.agent.extensions.ui.buttons.ButtonConfiguration
 
 /**
- * Roo Code extension button provider.
- * Provides button configuration specific to Roo Code extension.
+ * pabCoder extension button provider.
+ * Provides button configuration specific to pabCoder extension.
  */
 class RooCodeButtonProvider : ExtensionButtonProvider {
     
     override fun getExtensionId(): String = "roo-code"
     
-    override fun getDisplayName(): String = "Roo Code"
+    override fun getDisplayName(): String = "pabCoder"
     
     override fun getDescription(): String = "AI-powered code assistant with full capabilities"
     
@@ -49,11 +49,11 @@ class RooCodeButtonProvider : ExtensionButtonProvider {
     }
     
     /**
-     * Roo Code button configuration - shows all buttons (full-featured).
+     * pabCoder button configuration - shows all buttons (full-featured).
      */
     private class RooCodeButtonConfiguration : ButtonConfiguration {
         override fun isButtonVisible(buttonType: ButtonType): Boolean {
-            return true // All buttons are visible for Roo Code
+            return true // All buttons are visible for pabCoder
         }
         
         override fun getVisibleButtons(): List<ButtonType> {

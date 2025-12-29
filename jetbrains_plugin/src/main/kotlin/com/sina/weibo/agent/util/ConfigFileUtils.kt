@@ -159,7 +159,7 @@ object ConfigFileUtils {
         val properties = Properties()
         properties.setProperty(PluginConstants.ConfigFiles.EXTENSION_TYPE_KEY, "roo-code")
         properties.setProperty("# Available extension types:", "")
-        properties.setProperty("# - roo-code: Roo Code extension", "")
+        properties.setProperty("# - roo-code: pabCoder extension", "")
         properties.setProperty("# - cline: Cline AI extension", "")
         properties.setProperty("# - custom: Custom extension", "")
         
